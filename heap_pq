@@ -1,0 +1,18 @@
+# Heap / Priority Queue
+
+A Priority Queue needs to have three operations:
+1. Insert a new item
+2. Remove the maximum-priority item
+3. Get the maximum-priority item without removing it
+
+There are several data structures we can consider to build a PQ. 
+1. Array
+  An array supports getting the highest priority item in constant time O(1) because it is the first item.
+  Using the indices, we can get the highest, second highest, to least priority item in O(1).
+  However, with arrays we have to think about shifting the elements manually after removing the first item. 
+  This shifting will take linear runtime O(N), which means removing the max-priority element will take O(N).
+  Inserting a new element will also take linear runtime O(N) as we need to sort the element into the right position in the array.
+2. Sorted Linked List
+  Getting and removing the max-priority element will take constant time O(1) as it is the 'start' Node.
+  Inserting an element takes linear time O(N) because we need to traverse through each element to find the right position. 
+3. HashMap / HashSet
